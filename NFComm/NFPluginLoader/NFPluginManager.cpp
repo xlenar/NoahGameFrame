@@ -72,8 +72,8 @@
 #pragma comment( lib, "NFNoSqlPlugin.lib" )
 #pragma comment( lib, "NFSecurityPlugin.lib" )
 #pragma comment( lib, "NFTestPlugin.lib" )
-#pragma comment( lib, "NFRenderPlugin.lib" )
-#pragma comment( lib, "NFBluePrintPlugin.lib" )
+//#pragma comment( lib, "NFRenderPlugin.lib" )
+//#pragma comment( lib, "NFBluePrintPlugin.lib" )
 
 #pragma comment( lib, "NFDBLogicPlugin.lib" )
 #pragma comment( lib, "NFDBNet_ClientPlugin.lib" )
@@ -105,8 +105,8 @@
 
 #pragma comment( lib, "Tutorial1.lib" )
 #pragma comment( lib, "Tutorial2.lib" )
-#pragma comment( lib, "Tutorial3.lib" )
-#pragma comment( lib, "Tutorial4.lib" )
+#pragma comment( lib, "Tutorial3Plugin.lib" )
+#pragma comment( lib, "Tutorial4Plugin.lib" )
 #pragma comment( lib, "Tutorial5.lib" )
 #pragma comment( lib, "Tutorial6.lib" )
 #pragma comment( lib, "Tutorial7.lib" )
@@ -330,8 +330,8 @@ bool NFPluginManager::LoadStaticPlugin()
 	CREATE_PLUGIN(this, NFInventoryPlugin)
 
 #if NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_WIN
-	CREATE_PLUGIN(this, NFRenderPlugin)
-	CREATE_PLUGIN(this, NFBluePrintPlugin)
+	//CREATE_PLUGIN(this, NFRenderPlugin)
+	//CREATE_PLUGIN(this, NFBluePrintPlugin)
 #endif
 		
 //DB

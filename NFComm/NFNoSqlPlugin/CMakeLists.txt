@@ -37,7 +37,7 @@ else()
 	if (CMAKE_BUILD_TYPE MATCHES "Release")
 		target_link_libraries(NFNoSqlPlugin hiredis)
 	else()
-		target_link_libraries(NFNoSqlPlugin hiredis_d)
+		target_link_libraries(NFNoSqlPlugin hiredis)
 	endif()
 
 	target_link_libraries(NFNoSqlPlugin -static-libstdc++)

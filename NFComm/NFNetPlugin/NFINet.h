@@ -42,7 +42,7 @@
 #include "NFComm/NFPluginModule/NFGUID.h"
 
 #if NF_PLATFORM == NF_PLATFORM_WIN
-#include <WinSock2.h>
+#include <winsock.h>
 #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_LINUX || NF_PLATFORM == NF_PLATFORM_ANDROID
 
 #if NF_PLATFORM == NF_PLATFORM_APPLE

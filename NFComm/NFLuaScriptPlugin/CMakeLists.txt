@@ -6,15 +6,13 @@ add_library(NFLuaScriptPlugin STATIC
 	${NFLuaScriptPlugin_ROOT_Cpp}
 	${NFLuaScriptPlugin_ROOT_Hpp})
 
-target_link_libraries(NFLuaScriptPlugin liblua.a)
 add_dependencies(NFLuaScriptPlugin NFCore)
 
 if(UNIX)
-
 	target_link_libraries(NFLuaScriptPlugin -static-libstdc++)
+	target_link_libraries(NFLuaScriptPlugin liblua.a)
 else()
-
-
+	target_link_libraries(NFLuaScriptPlugin lua)
 endif()
 
 set_target_properties( NFLuaScriptPlugin PROPERTIES OUTPUT_NAME_DEBUG "NFLuaScriptPlugin")

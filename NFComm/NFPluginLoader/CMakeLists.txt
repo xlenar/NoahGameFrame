@@ -52,18 +52,17 @@ target_link_libraries(NFPluginLoader NFProxyServerNet_ServerPlugin)
 target_link_libraries(NFPluginLoader NFWorldNet_ClientPlugin)
 target_link_libraries(NFPluginLoader NFWorldNet_ServerPlugin)
 
+target_link_libraries(NFPluginLoader Tutorial1)
+target_link_libraries(NFPluginLoader Tutorial2)
+target_link_libraries(NFPluginLoader Tutorial3Plugin)
+target_link_libraries(NFPluginLoader Tutorial4Plugin)
+target_link_libraries(NFPluginLoader Tutorial5)
+target_link_libraries(NFPluginLoader Tutorial6)
+target_link_libraries(NFPluginLoader Tutorial7)
 
-#target_link_libraries(NFPluginLoader Tutorial1)
-#target_link_libraries(NFPluginLoader Tutorial2)
-#target_link_libraries(NFPluginLoader Tutorial3Plugin)
-#target_link_libraries(NFPluginLoader Tutorial4Plugin)
-#target_link_libraries(NFPluginLoader Tutorial5)
-#target_link_libraries(NFPluginLoader Tutorial6)
-#target_link_libraries(NFPluginLoader Tutorial7)
-
+add_dependencies(NFPluginLoader NFCore Tutorial1 Tutorial2 Tutorial3Plugin Tutorial4Plugin Tutorial5 Tutorial6 Tutorial7)
 
 if (UNIX)
-	add_dependencies(NFPluginLoader NFCore)
 
 	#if (CMAKE_BUILD_TYPE MATCHES "Release")
 	#	target_link_libraries(NFPluginLoader libSDL2.a)
@@ -74,7 +73,7 @@ if (UNIX)
 	target_link_libraries(NFPluginLoader -static-libstdc++ -pthread ${CMAKE_DL_LIBS})
 
 else()
-
+	
 endif()
 
 set_target_properties( NFPluginLoader PROPERTIES OUTPUT_NAME_DEBUG "NFPluginLoader")

@@ -10,9 +10,9 @@ add_library(NFMessageDefine STATIC
 
 if (UNIX)
 	if (CMAKE_BUILD_TYPE MATCHES "Release")
-		target_link_libraries(NFMessageDefine libprotobuf.a)
+	#	target_link_libraries(NFMessageDefine libprotobuf.a)
 	else()
-		target_link_libraries(NFMessageDefine libprotobufd.a)
+	#	target_link_libraries(NFMessageDefine libprotobufd.a)
 	endif()
 
 	add_definitions(

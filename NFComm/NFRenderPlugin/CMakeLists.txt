@@ -1,3 +1,5 @@
+set(ProjectName "NFRenderPlugin")
+
 include_directories(
 	./)
 
@@ -6,9 +8,6 @@ include_directories(
 
 include_directories(
 		./imgui)
-
-
-set(ProjectName "NFRenderPlugin")
 
 file(GLOB NFUIPlugin_ROOT_Cpp
 	*.cpp)
@@ -67,7 +66,7 @@ set_target_properties( NFRenderPlugin PROPERTIES
 	RUNTIME_OUTPUT_DIRECTORY ${NFOutPutDir}
 	LIBRARY_OUTPUT_DIRECTORY ${NFOutPutDir} )
 	
-link_NFSDK("NFRenderPlugin")
+#link_NFSDK("NFRenderPlugin")
 
 if(UNIX)
 	if (CMAKE_BUILD_TYPE MATCHES "Release")

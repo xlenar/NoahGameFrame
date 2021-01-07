@@ -33,7 +33,7 @@ using namespace std;
 #pragma comment( lib, "ws2_32" )
 
 #ifdef _DEBUG
-#pragma comment( lib, "hiredis_d.lib") 
+#pragma comment( lib, "hiredis.lib") 
 #else
 #pragma comment( lib, "hiredis.lib") 
 #endif	

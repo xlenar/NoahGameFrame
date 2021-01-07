@@ -36,6 +36,6 @@ if(UNIX)
 	)
 else()
 
-
+	target_link_libraries(NFNetPlugin Iphlpapi)
 
 endif()

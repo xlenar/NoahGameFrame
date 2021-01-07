@@ -1,3 +1,4 @@
+protoc.exe --version
 
 protoc.exe -I=./ --cpp_out=./ ./NFDefine.proto
 protoc.exe -I=./ --cpp_out=./ ./NFMsgBase.proto

@@ -83,7 +83,12 @@
         "typeindex": "cpp",
         "complex": "cpp",
         "variant": "cpp",
-        "clocale": "cpp"
+        "clocale": "cpp",
+        "xlocale": "cpp",
+        "xlocnum": "cpp",
+        "*.inc": "cpp",
+        "filesystem": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cmake.configureOnOpen": true
 }

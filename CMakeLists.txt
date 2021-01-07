@@ -3,7 +3,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS On)
 option(BUILD_TOOLS_ONLY "help string describing option" OFF)
 option(BUILD_MID_WARE_SDK "help string describing option" OFF)
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.9)
 
 macro(link_NFSDK projName)
 	add_dependencies(${projName} NFNetPlugin NFCore NFMessageDefine)
@@ -19,16 +19,6 @@ endif(APPLE)
 
 set(SolutionDir ${PROJECT_SOURCE_DIR})
 
-if( CMAKE_BUILD_TYPE STREQUAL "Debug" )
-	set(NFOutPutDir ${PROJECT_SOURCE_DIR}/_Out/Debug)
-else()
-	set(NFOutPutDir ${PROJECT_SOURCE_DIR}/_Out/Release)
-endif()
-
-
-message("NFOutPutDir:${NFOutPutDir}")
-
-
 # message(STATUS "SolutionDir=" ${SolutionDir})
 if (APPLE)
 	include_directories(
@@ -42,6 +32,7 @@ if (APPLE)
 		${SolutionDir}/Dependencies/vcpkg/installed/x64-osx/include/google/protobuf/ 
 		${SolutionDir}/Dependencies/vcpkg/installed/x64-osx/include/google/protobuf/src/
 	)
+
 elseif(UNIX)
 	include_directories(
 		${SolutionDir}
@@ -54,6 +45,7 @@ elseif(UNIX)
 		${SolutionDir}/Dependencies/vcpkg/installed/x64-linux/include/google/protobuf/ 
 		${SolutionDir}/Dependencies/vcpkg/installed/x64-linux/include/google/protobuf/src/
 	)
+
 else()
 	include_directories(
 		${SolutionDir}
@@ -66,8 +58,32 @@ else()
 		${SolutionDir}/Dependencies/vcpkg/installed/x64-windows-static/include/google/protobuf/ 
 		${SolutionDir}/Dependencies/vcpkg/installed/x64-windows-static/include/google/protobuf/src/
 	)
+	
+	
 endif()
 
+if(WIN32)
+	set(NFOutPutDir ${PROJECT_SOURCE_DIR}/_Out)
+	set(DependenciesLibPath ${SolutionDir}/Dependencies/lib)
+else()
+	if( CMAKE_BUILD_TYPE STREQUAL "Debug" )
+		set(NFOutPutDir ${PROJECT_SOURCE_DIR}/_Out/Debug)
+	else()
+		set(NFOutPutDir ${PROJECT_SOURCE_DIR}/_Out/Release)	
+	endif()
+
+	if( CMAKE_BUILD_TYPE STREQUAL "Debug" )
+		set(DependenciesLibPath ${SolutionDir}/Dependencies/lib/Debug )
+	else()
+		set(DependenciesLibPath ${SolutionDir}/Dependencies/lib/Release )
+	endif()	
+endif()
+
+set(NFLinkDirectories ${NFOutPutDir} ${DependenciesLibPath})
+	
+message("CMAKE_BUILD_TYPE:${CMAKE_BUILD_TYPE}")
+message("NFOutPutDir:${NFOutPutDir}")
+message("DependenciesLibPath:${DependenciesLibPath}")
 
 #message("Build Type:"${CMAKE_BUILD_TYPE} ${CMAKE_CXX_FLAGS})
 
@@ -89,16 +105,13 @@ if(UNIX)
 else()
 	SET ( CMAKE_CXX_FLAGS "-D_X64 -D_WINDOWS /EHsc" )
 	include_directories(${SolutionDir}/Dependencies/libevent/WIN32-Code/)
+	set(CMAKE_CXX_FLAGS_RELEASE "/MT")
+	set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
 endif()
 
-if( CMAKE_BUILD_TYPE STREQUAL "Debug" )
-	set(DependenciesLibPath ${SolutionDir}/Dependencies/lib ${SolutionDir}/_Out/Debug/ ${SolutionDir}/Dependencies/lib/Debug)
-else()
-	set(DependenciesLibPath ${SolutionDir}/Dependencies/lib ${SolutionDir}/_Out/Release/ ${SolutionDir}/Dependencies/lib/Release)
-endif()
+message("CMAKE_CXX_FLAGS:${CMAKE_CXX_FLAGS}")
 
-
-link_directories(${DependenciesLibPath})
+link_directories(${NFLinkDirectories})
 
 if(${BUILD_TOOLS_ONLY} STREQUAL "ON")
 	message("Build Tools Only")
