@@ -330,8 +330,13 @@ bool NFPluginManager::LoadStaticPlugin()
 	CREATE_PLUGIN(this, NFInventoryPlugin)
 
 #if NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_WIN
+<<<<<<< HEAD
 	//CREATE_PLUGIN(this, NFRenderPlugin)
 	//CREATE_PLUGIN(this, NFBluePrintPlugin)
+=======
+//CREATE_PLUGIN(this, NFRenderPlugin)
+//CREATE_PLUGIN(this, NFBluePrintPlugin)
+>>>>>>> upstream/master
 #endif
 		
 //DB
