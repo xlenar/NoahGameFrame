@@ -95,74 +95,98 @@ struct NFIMsgHead
 
     static int64_t NF_HTONLL(int64_t nData)
     {
-#if NF_PLATFORM == NF_PLATFORM_WIN
-        return htonll(nData);
-#elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-        return OSSwapHostToBigInt64(nData);
+#ifdef NF_NETWORK_SKIP_ENDIAN_CONVERSION
+        return nData;
 #else
+    #if NF_PLATFORM == NF_PLATFORM_WIN
+        return htonll(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
+        return OSSwapHostToBigInt64(nData);
+    #else
         return htobe64(nData);
-#endif
+    #endif
+#endif // NF_NETWORK_SKIP_ENDIAN_CONVERSION
     }
 
     static int64_t NF_NTOHLL(int64_t nData)
     {
-#if NF_PLATFORM == NF_PLATFORM_WIN
-        return ntohll(nData);
-#elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-        return OSSwapBigToHostInt64(nData);
-#elif NF_PLATFORM == NF_PLATFORM_ANDROID
-        return betoh64(nData);
+#ifdef NF_NETWORK_SKIP_ENDIAN_CONVERSION
+        return nData;
 #else
+    #if NF_PLATFORM == NF_PLATFORM_WIN
+        return ntohll(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
+        return OSSwapBigToHostInt64(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_ANDROID
+        return betoh64(nData);
+    #else
         return be64toh(nData);
-#endif
+    #endif
+#endif // NF_NETWORK_SKIP_ENDIAN_CONVERSION
     }
 
     static int32_t NF_HTONL(int32_t nData)
     {
-#if NF_PLATFORM == NF_PLATFORM_WIN
-        return htonl(nData);
-#elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-        return OSSwapHostToBigInt32(nData);
+#ifdef NF_NETWORK_SKIP_ENDIAN_CONVERSION
+        return nData;
 #else
+    #if NF_PLATFORM == NF_PLATFORM_WIN
+        return htonl(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
+        return OSSwapHostToBigInt32(nData);
+    #else
         return htobe32(nData);
-#endif
+    #endif
+#endif // NF_NETWORK_SKIP_ENDIAN_CONVERSION
     }
 
     static int32_t NF_NTOHL(int32_t nData)
     {
-#if NF_PLATFORM == NF_PLATFORM_WIN
-        return ntohl(nData);
-#elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-        return OSSwapBigToHostInt32(nData);
-#elif NF_PLATFORM == NF_PLATFORM_ANDROID
-        return betoh32(nData);
+#ifdef NF_NETWORK_SKIP_ENDIAN_CONVERSION
+        return nData;
 #else
+    #if NF_PLATFORM == NF_PLATFORM_WIN
+        return ntohl(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
+        return OSSwapBigToHostInt32(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_ANDROID
+        return betoh32(nData);
+    #else
         return be32toh(nData);
-#endif
+    #endif
+#endif // NF_NETWORK_SKIP_ENDIAN_CONVERSION
     }
 
     static int16_t NF_HTONS(int16_t nData)
     {
-#if NF_PLATFORM == NF_PLATFORM_WIN
-        return htons(nData);
-#elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-        return OSSwapHostToBigInt16(nData);
+#ifdef NF_NETWORK_SKIP_ENDIAN_CONVERSION
+        return nData;
 #else
+    #if NF_PLATFORM == NF_PLATFORM_WIN
+        return htons(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
+        return OSSwapHostToBigInt16(nData);
+    #else
         return htobe16(nData);
-#endif
+    #endif
+#endif // NF_NETWORK_SKIP_ENDIAN_CONVERSION
     }
 
     static int16_t NF_NTOHS(int16_t nData)
     {
-#if NF_PLATFORM == NF_PLATFORM_WIN
-        return ntohs(nData);
-#elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-        return OSSwapBigToHostInt16(nData);
-#elif NF_PLATFORM == NF_PLATFORM_ANDROID
-        return betoh16 (nData);
+#ifdef NF_NETWORK_SKIP_ENDIAN_CONVERSION
+        return nData;
 #else
+    #if NF_PLATFORM == NF_PLATFORM_WIN
+        return ntohs(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
+        return OSSwapBigToHostInt16(nData);
+    #elif NF_PLATFORM == NF_PLATFORM_ANDROID
+        return betoh16 (nData);
+    #else
         return be16toh(nData);
 #endif
+#endif // NF_NETWORK_SKIP_ENDIAN_CONVERSION
     }
 
 };
