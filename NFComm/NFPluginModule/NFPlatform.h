@@ -268,6 +268,12 @@
 #    define NF_ENDIAN NF_ENDIAN_LITTLE
 #endif
 
+//----------------------------------------------------------------------------
+// Network Endian Settings
+// For skip useless byte order converting if the client and server byte order is same
+#define NF_NETWORK_SKIP_ENDIAN_CONVERSION 1
+
+
 #include <stdint.h>
 #include <chrono>
 #include <functional>
