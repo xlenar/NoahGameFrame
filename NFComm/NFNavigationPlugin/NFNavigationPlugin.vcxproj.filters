@@ -1,14 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="NFNavigationPlugin.h" />
-    <ClInclude Include="NFNavigationModule.h" />
-    <ClInclude Include="NFNavigationDataModule.h" />
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\NFNavigationDataModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\NFNavigationModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\NFNavigationPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="NFNavigationPlugin.cpp" />
-    <ClCompile Include="NFNavigationModule.cpp" />
-    <ClCompile Include="NFNavigationDataModule.cpp" />
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\NFNavigationDataModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\NFNavigationModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\NFNavigationPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{126EBB5F-3AC9-33A4-8919-14446CA29346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{32BF32AE-7BCF-3D0B-B9C9-83E3F6E86F82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

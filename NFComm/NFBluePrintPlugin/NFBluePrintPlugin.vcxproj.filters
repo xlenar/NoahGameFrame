@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBPVMEventModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBPVirtualMachineModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBluePrintModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBluePrintPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFArithmetic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFBranch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFDebugger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFExecutor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFModifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFMonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFVariable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintVM\NFBPVirtualMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBPVMEventModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBPVirtualMachineModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBluePrintModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBluePrintPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFArithmetic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFBranch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFDebugger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFExecutor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFModifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFMonitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintNode\NFVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\BluePrintVM\NFBPVirtualMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{126EBB5F-3AC9-33A4-8919-14446CA29346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{32BF32AE-7BCF-3D0B-B9C9-83E3F6E86F82}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

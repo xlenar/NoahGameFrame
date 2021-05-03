@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
@@ -9,106 +12,437 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B65A0FB2-E49B-4FE9-93F7-EAE6B8E51944}</ProjectGuid>
+    <ProjectGuid>{F8C262B9-2882-33F7-B868-AE9EA25E5B41}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>NFPluginLoader</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>NFPluginLoader</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\NFCommon.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\NFCommon.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <TargetName>$(ProjectName)</TargetName>
-    <EmbedManifest>false</EmbedManifest>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Pro\projects\adelaria-backend\NoahGameFrame\_Out\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NFPluginLoader.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NFPluginLoader</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Pro\projects\adelaria-backend\NoahGameFrame\_Out\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NFPluginLoader.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NFPluginLoader</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Pro\projects\adelaria-backend\NoahGameFrame\_Out\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">NFPluginLoader.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">NFPluginLoader</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Pro\projects\adelaria-backend\NoahGameFrame\_Out\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">NFPluginLoader.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">NFPluginLoader</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <BrowseInformation>false</BrowseInformation>
-      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>_X64;_WINDOWS;_CONSOLE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <UACExecutionLevel>HighestAvailable</UACExecutionLevel>
-      <IgnoreSpecificDefaultLibraries>
-      </IgnoreSpecificDefaultLibraries>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-    <PostBuildEvent>
-    </PostBuildEvent>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_X64;_WINDOWS;_CONSOLE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_X64;NDEBUG;_CONSOLE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>_X64;_WINDOWS;_CONSOLE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_X64;_WINDOWS;_CONSOLE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>_X64;_WINDOWS;NDEBUG;_CONSOLE;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_X64;_WINDOWS;NDEBUG;_CONSOLE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>_X64;_WINDOWS;NDEBUG;_CONSOLE;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_X64;_WINDOWS;NDEBUG;_CONSOLE;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Pro\projects\adelaria-backend\NoahGameFrame;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\NFMessageDefine;C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginModule;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\hiredis\hiredis_win;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\SDL2;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\vcpkg\installed\x64-windows-static\include\google\protobuf\src;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\libevent\WIN32-Code;C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="NFDynLib.h" />
-    <ClInclude Include="NFPluginManager.h" />
-    <ClInclude Include="NFPluginServer.h" />
+    <CustomBuild Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Pro/projects/adelaria-backend/NoahGameFrame/NFComm/NFPluginLoader/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pro/projects/adelaria-backend/NoahGameFrame -BC:/Pro/projects/adelaria-backend/NoahGameFrame --check-stamp-file C:/Pro/projects/adelaria-backend/NoahGameFrame/NFComm/NFPluginLoader/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Pro/projects/adelaria-backend/NoahGameFrame/NFComm/NFPluginLoader/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pro/projects/adelaria-backend/NoahGameFrame -BC:/Pro/projects/adelaria-backend/NoahGameFrame --check-stamp-file C:/Pro/projects/adelaria-backend/NoahGameFrame/NFComm/NFPluginLoader/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Pro/projects/adelaria-backend/NoahGameFrame/NFComm/NFPluginLoader/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pro/projects/adelaria-backend/NoahGameFrame -BC:/Pro/projects/adelaria-backend/NoahGameFrame --check-stamp-file C:/Pro/projects/adelaria-backend/NoahGameFrame/NFComm/NFPluginLoader/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Pro/projects/adelaria-backend/NoahGameFrame/NFComm/NFPluginLoader/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pro/projects/adelaria-backend/NoahGameFrame -BC:/Pro/projects/adelaria-backend/NoahGameFrame --check-stamp-file C:/Pro/projects/adelaria-backend/NoahGameFrame/NFComm/NFPluginLoader/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NFDynLib.cpp" />
-    <ClCompile Include="NFPluginManager.cpp" />
-    <ClCompile Include="NFPluginServer.cpp" />
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\NFDynLib.cpp" />
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\NFPluginManager.cpp" />
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\NFPluginServer.cpp" />
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\NFDynLib.h" />
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\NFPluginManager.h" />
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFPluginLoader\NFPluginServer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\ZERO_CHECK.vcxproj">
+      <Project>{182192C3-B423-3A99-85E6-17B4FCA02EE8}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFActorPlugin\NFActorPlugin.vcxproj">
+      <Project>{CBFA85F6-6874-340E-81CD-8333CE9F3D3C}</Project>
+      <Name>NFActorPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFBluePrintPlugin\NFBluePrintPlugin.vcxproj">
+      <Project>{F1A4215B-7342-36C5-BE54-204EF2238CDA}</Project>
+      <Name>NFBluePrintPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFExamples\NFChatPlugin\NFChatPlugin.vcxproj">
+      <Project>{152281FC-5ECE-3064-B355-880C9CD3D7EC}</Project>
+      <Name>NFChatPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFConfigPlugin\NFConfigPlugin.vcxproj">
+      <Project>{35856EC4-6EE3-33D3-A67F-0B16D9382F00}</Project>
+      <Name>NFConfigPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFExamples\NFConsumeManagerPlugin\NFConsumeManagerPlugin.vcxproj">
+      <Project>{3A489809-F9ED-384E-8FCB-9C46B6819F5B}</Project>
+      <Name>NFConsumeManagerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFCore\NFCore.vcxproj">
+      <Project>{8C078EFA-4514-36CA-BF5F-D456B1AF0B57}</Project>
+      <Name>NFCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFDBLogicPlugin\NFDBLogicPlugin.vcxproj">
+      <Project>{B4A34313-DBBD-33A0-B3DF-8479473C1B12}</Project>
+      <Name>NFDBLogicPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFDBNet_ClientPlugin\NFDBNet_ClientPlugin.vcxproj">
+      <Project>{25153120-1EB9-3A9B-BEFC-788D71416DB1}</Project>
+      <Name>NFDBNet_ClientPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFDBNet_ServerPlugin\NFDBNet_ServerPlugin.vcxproj">
+      <Project>{890A5556-6AD9-3DF5-B1F3-CB0E09D3F4D3}</Project>
+      <Name>NFDBNet_ServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\NFGameServerNet_ClientPlugin.vcxproj">
+      <Project>{19214548-660D-3E1D-8B70-D08728703C18}</Project>
+      <Name>NFGameServerNet_ClientPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFGameServerNet_ServerPlugin.vcxproj">
+      <Project>{D3F8117C-B730-313A-831E-5D4536DABA41}</Project>
+      <Name>NFGameServerNet_ServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFGameServerPlugin.vcxproj">
+      <Project>{4222E79D-7BAA-3B5F-A5DB-D3E2F3D79DFB}</Project>
+      <Name>NFGameServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFExamples\NFInventoryPlugin\NFInventoryPlugin.vcxproj">
+      <Project>{0F124BB0-ED41-380E-B34D-314AC6D08F60}</Project>
+      <Name>NFInventoryPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFKernelPlugin\NFKernelPlugin.vcxproj">
+      <Project>{89C3A03B-C93D-3242-9763-2084D593A078}</Project>
+      <Name>NFKernelPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFLogPlugin\NFLogPlugin.vcxproj">
+      <Project>{50BC5905-FCCD-3A57-9A60-EDC785EC9C4B}</Project>
+      <Name>NFLogPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginLogicPlugin\NFLoginLogicPlugin.vcxproj">
+      <Project>{F6B07DF4-EE79-3BB0-80F5-BFCC77D7B212}</Project>
+      <Name>NFLoginLogicPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_ClientPlugin\NFLoginNet_ClientPlugin.vcxproj">
+      <Project>{14F14F60-CE86-3F08-BFB9-987EF0DC6A3D}</Project>
+      <Name>NFLoginNet_ClientPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_HttpServerPlugin\NFLoginNet_HttpServerPlugin.vcxproj">
+      <Project>{1A41166E-ABD6-3A37-B669-9B9B6F75F80C}</Project>
+      <Name>NFLoginNet_HttpServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_ServerPlugin\NFLoginNet_ServerPlugin.vcxproj">
+      <Project>{54C91E7B-D56A-30EE-9D66-DF6551E78FCD}</Project>
+      <Name>NFLoginNet_ServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFLuaScriptPlugin\NFLuaScriptPlugin.vcxproj">
+      <Project>{204440BC-64A6-3C79-A104-891537D2AD83}</Project>
+      <Name>NFLuaScriptPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFMasterNet_HttpServerPlugin\NFMasterNet_HttpServerPlugin.vcxproj">
+      <Project>{1805B30F-CA31-3393-9561-25C045EA0ED8}</Project>
+      <Name>NFMasterNet_HttpServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFMasterNet_ServerPlugin\NFMasterNet_ServerPlugin.vcxproj">
+      <Project>{5A31A2C4-7B24-30DD-844B-56634DB3E202}</Project>
+      <Name>NFMasterNet_ServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFMasterServerPlugin\NFMasterServerPlugin.vcxproj">
+      <Project>{D035321A-9EBE-3055-8204-BBBE476C5FB5}</Project>
+      <Name>NFMasterServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFMessageDefine\NFMessageDefine.vcxproj">
+      <Project>{618ABF4D-B6F6-3D43-91B3-76AD7B56BF00}</Project>
+      <Name>NFMessageDefine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNavigationPlugin\NFNavigationPlugin.vcxproj">
+      <Project>{2FDDCFA3-4912-349A-BA64-F093FC3CFCFB}</Project>
+      <Name>NFNavigationPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNetPlugin\NFNetPlugin.vcxproj">
+      <Project>{5BA424F1-D3B3-3585-A275-3FEDCAC9E56A}</Project>
+      <Name>NFNetPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFNoSqlPlugin\NFNoSqlPlugin.vcxproj">
+      <Project>{D2766B4F-04AE-3E3E-BC75-96C2C64FC273}</Project>
+      <Name>NFNoSqlPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFProxyLogicPlugin\NFProxyLogicPlugin.vcxproj">
+      <Project>{F9CD87C0-3CF1-35C2-8182-32F8C82019B4}</Project>
+      <Name>NFProxyLogicPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFProxyServerNet_ClientPlugin\NFProxyServerNet_ClientPlugin.vcxproj">
+      <Project>{7F28E58E-02CD-3B12-B9C1-BD5420545910}</Project>
+      <Name>NFProxyServerNet_ClientPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFProxyServerNet_ServerPlugin\NFProxyServerNet_ServerPlugin.vcxproj">
+      <Project>{5920E851-8348-3AED-971B-093D543F4885}</Project>
+      <Name>NFProxyServerNet_ServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFRenderPlugin\NFRenderPlugin.vcxproj">
+      <Project>{F3844EE7-8D12-380F-BE14-ED9A5D2D08D2}</Project>
+      <Name>NFRenderPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFSecurityPlugin\NFSecurityPlugin.vcxproj">
+      <Project>{36762067-9C93-38E5-A31E-3AE5E462D0F3}</Project>
+      <Name>NFSecurityPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFComm\NFTestPlugin\NFTestPlugin.vcxproj">
+      <Project>{3962FF49-A76C-3006-B151-15AFF24ADABA}</Project>
+      <Name>NFTestPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFWorldNet_ClientPlugin\NFWorldNet_ClientPlugin.vcxproj">
+      <Project>{5E7BA7B2-2CEF-300E-8A75-C34C674BF25F}</Project>
+      <Name>NFWorldNet_ClientPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFWorldNet_ServerPlugin\NFWorldNet_ServerPlugin.vcxproj">
+      <Project>{FE39265F-1194-3896-B12E-3ED6CE11DCA7}</Project>
+      <Name>NFWorldNet_ServerPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\Tutorial\Tutorial1\Tutorial1.vcxproj">
+      <Project>{96090ED6-CF3E-3383-9AD2-2D588A4FCFEF}</Project>
+      <Name>Tutorial1</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\Tutorial\Tutorial2\Tutorial2.vcxproj">
+      <Project>{960F60E5-3958-3BE9-9B0D-18A0EB53C700}</Project>
+      <Name>Tutorial2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\Tutorial\Tutorial3\Tutorial3Plugin.vcxproj">
+      <Project>{B3C11DAE-9532-3B94-AA19-D9A4C3042EA2}</Project>
+      <Name>Tutorial3Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\Tutorial\Tutorial4\Tutorial4Plugin.vcxproj">
+      <Project>{59F0D6D2-9BEE-3B02-BB82-680AA1D828CE}</Project>
+      <Name>Tutorial4Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\Tutorial\Tutorial5\Tutorial5.vcxproj">
+      <Project>{794742E6-0A2A-35FE-B524-5C98A664FC3D}</Project>
+      <Name>Tutorial5</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\Tutorial\Tutorial6\Tutorial6.vcxproj">
+      <Project>{840065CD-55E4-3AB4-839D-CB2FE4C1FE80}</Project>
+      <Name>Tutorial6</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\Tutorial\Tutorial7\Tutorial7.vcxproj">
+      <Project>{D28CAFEC-D324-3E45-AE41-514AB0C35668}</Project>
+      <Name>Tutorial7</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\Dependencies\navigation\navigation.vcxproj">
+      <Project>{A6237EF5-3056-3C15-A5AC-2CB16D8C4B18}</Project>
+      <Name>navigation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

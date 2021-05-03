@@ -1,18 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="NFGameServerNet_ServerPlugin.h" />
-    <ClInclude Include="NFGameServerNet_ServerModule.h" />
-    <ClInclude Include="NFAutoBroadcastModule.h" />
-    <ClInclude Include="NFSceneAutoBroadcastModule.h" />
-    <ClInclude Include="NFGameManagerModule.h" />
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFAutoBroadcastModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFGameManagerModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFGameServerNet_ServerModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFGameServerNet_ServerPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFSceneAutoBroadcastModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="NFGameServerNet_ServerPlugin.cpp" />
-    <ClCompile Include="NFGameServerNet_ServerModule.cpp" />
-    <ClCompile Include="NFAutoBroadcastModule.cpp" />
-    <ClCompile Include="NFSceneAutoBroadcastModule.cpp" />
-    <ClCompile Include="NFGameManagerModule.cpp" />
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFAutoBroadcastModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFGameManagerModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFGameServerNet_ServerModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFGameServerNet_ServerPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\NFSceneAutoBroadcastModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ServerPlugin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{126EBB5F-3AC9-33A4-8919-14446CA29346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{32BF32AE-7BCF-3D0B-B9C9-83E3F6E86F82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

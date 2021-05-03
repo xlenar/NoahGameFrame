@@ -1,65 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="NFSceneModule">
-      <UniqueIdentifier>{d60b14e4-c04c-46c0-ab8e-f0d3b6bdddbf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="NFPropertyModule">
-      <UniqueIdentifier>{8e42431a-1328-4cf4-8d08-38101ed10817}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="NFNPCRefreshModule">
-      <UniqueIdentifier>{c918611e-a4d0-445a-98cd-c048b4f6d003}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="NFRoleModule">
-      <UniqueIdentifier>{1431a766-328f-4a0b-b09b-fb7314439da7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="NFSyncPosModule">
-      <UniqueIdentifier>{e50b7301-9914-4009-8fbb-686e76d838a6}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFCreateRoleModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFGameServerModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFGameServerPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFNPCRefreshModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFPropertyConfigModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFPropertyModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFSceneProcessModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFSyncPosModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NFGameServerPlugin.h" />
-    <ClInclude Include="NFGameServerModule.h" />
-    <ClInclude Include="NFSceneProcessModule.h">
-      <Filter>NFSceneModule</Filter>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFCreateRoleModule.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NFPropertyConfigModule.h">
-      <Filter>NFPropertyModule</Filter>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFGameServerModule.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NFPropertyModule.h">
-      <Filter>NFPropertyModule</Filter>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFGameServerPlugin.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NFNPCRefreshModule.h">
-      <Filter>NFNPCRefreshModule</Filter>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFNPCRefreshModule.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NFCreateRoleModule.h">
-      <Filter>NFRoleModule</Filter>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFPropertyConfigModule.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NFSyncPosModule.h">
-      <Filter>NFSyncPosModule</Filter>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFPropertyModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFSceneProcessModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\NFSyncPosModule.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="NFGameServerPlugin.cpp" />
-    <ClCompile Include="NFGameServerModule.cpp" />
-    <ClCompile Include="NFSceneProcessModule.cpp">
-      <Filter>NFSceneModule</Filter>
-    </ClCompile>
-    <ClCompile Include="NFPropertyConfigModule.cpp">
-      <Filter>NFPropertyModule</Filter>
-    </ClCompile>
-    <ClCompile Include="NFPropertyModule.cpp">
-      <Filter>NFPropertyModule</Filter>
-    </ClCompile>
-    <ClCompile Include="NFNPCRefreshModule.cpp">
-      <Filter>NFNPCRefreshModule</Filter>
-    </ClCompile>
-    <ClCompile Include="NFCreateRoleModule.cpp">
-      <Filter>NFRoleModule</Filter>
-    </ClCompile>
-    <ClCompile Include="NFSyncPosModule.cpp">
-      <Filter>NFSyncPosModule</Filter>
-    </ClCompile>
+    <CustomBuild Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerPlugin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{126EBB5F-3AC9-33A4-8919-14446CA29346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{32BF32AE-7BCF-3D0B-B9C9-83E3F6E86F82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

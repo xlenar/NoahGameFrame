@@ -116,3 +116,11 @@ NFComm/NFMessageDefine/protoc.exe
 #OSX .DS_Store
 .DS_Store
 /_Out/NFDataCfg/proto
+/x64
+/Temp
+CMakeFiles
+cmake_install
+*.dir
+*.cmake
+/build
+/.vscode/solution-explorer

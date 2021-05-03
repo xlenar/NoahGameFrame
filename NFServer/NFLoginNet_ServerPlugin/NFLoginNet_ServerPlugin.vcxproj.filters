@@ -1,12 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="NFLoginNet_ServerPlugin.h" />
-    <ClInclude Include="NFLoginNet_ServerModule.h" />
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_ServerPlugin\NFLoginNet_ServerModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_ServerPlugin\NFLoginNet_ServerPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_ServerPlugin\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="NFLoginNet_ServerPlugin.cpp" />
-    <ClCompile Include="NFLoginNet_ServerModule.cpp" />
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_ServerPlugin\NFLoginNet_ServerModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_ServerPlugin\NFLoginNet_ServerPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFLoginNet_ServerPlugin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{126EBB5F-3AC9-33A4-8919-14446CA29346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{32BF32AE-7BCF-3D0B-B9C9-83E3F6E86F82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

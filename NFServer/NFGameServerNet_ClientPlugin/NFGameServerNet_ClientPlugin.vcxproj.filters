@@ -1,14 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="NFGameServerNet_ClientPlugin.h" />
-    <ClInclude Include="NFGameServerToDBModule.h" />
-    <ClInclude Include="NFGameServerToWorldModule.h" />
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\NFGameServerNet_ClientPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\NFGameServerToDBModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\NFGameServerToWorldModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="NFGameServerNet_ClientPlugin.cpp" />
-    <ClCompile Include="NFGameServerToDBModule.cpp" />
-    <ClCompile Include="NFGameServerToWorldModule.cpp" />
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\NFGameServerNet_ClientPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\NFGameServerToDBModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\NFGameServerToWorldModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Pro\projects\adelaria-backend\NoahGameFrame\NFServer\NFGameServerNet_ClientPlugin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{126EBB5F-3AC9-33A4-8919-14446CA29346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{32BF32AE-7BCF-3D0B-B9C9-83E3F6E86F82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

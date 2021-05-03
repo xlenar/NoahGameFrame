@@ -24,6 +24,8 @@ if (UNIX)
 
 else()
 
+	add_dependencies(NFServer NFRenderPlugin NFBluePrintPlugin)
+
 endif()
 
 set_target_properties( NFServer PROPERTIES OUTPUT_NAME_DEBUG "NFServer")
