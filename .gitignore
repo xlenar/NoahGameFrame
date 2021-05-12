@@ -125,3 +125,14 @@ cmake_install
 /build
 /.vscode/solution-explorer
 /123.bat
+/CMakeCache.txt
+*.vcxproj
+*.filters
+/NoahFrame.sln
+/Dependencies/navigation/*.filters
+/Dependencies/navigation/*.vcxproj
+/NFComm/NFActorPlugin/*.filters
+/NFComm/NFActorPlugin/*.vcxproj
+/Dependencies/hiredis/hiredis_win/hiredis/msvc/.vs/msvc/v16/.suo
+/Dependencies/hiredis/hiredis_win/hiredis/msvc/Temp/Debug_x64/hiredis/hiredis.lib.recipe
+/Dependencies/hiredis/hiredis_win/hiredis/msvc/Temp/Release_x64/hiredis/hiredis.lib.recipe

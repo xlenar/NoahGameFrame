@@ -1,19 +1,20 @@
 
 @rem git submodule update --init --recursive
 
-@rem git clone https://github.com/Microsoft/vcpkg.git
+git clone https://github.com/Microsoft/vcpkg.git
 
-@rem cd Dependencies
+cd Dependencies
 
 @rem rm -rf vcpkg
 @rem rm -rf vcpkg_for_nf
 
-@rem rd /s /q vcpkg
-@rem rd /s /q vcpkg_for_nf
+rd /s /q vcpkg
+rd /s /q vcpkg_for_nf
 
-@rem git clone https://github.com/ketoo/vcpkg_for_nf.git
+git clone https://github.com/ketoo/vcpkg_for_nf.git
 
-@rem rename vcpkg_for_nf vcpkg
+rename vcpkg_for_nf vcpkg
+
 cd vcpkg
 
 7z.exe x installed\x64-windows-static\debug\lib\libprotobufd.zip  -oinstalled\x64-windows-static\debug\lib\
